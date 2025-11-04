@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Dress Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ffdde1 0%, #ee9ca7 100%);
+        }
+        header {
+            background: linear-gradient(90deg, #e96443 0%, #904e95 100%);
+            color: #fff;
+            padding: 24px 0 12px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 12px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #ffd700;
+        }
+        .featured {
+            padding: 24px 10px;
+            text-align: center;
+        }
+        h2 {
+            color: #e96443;
+            font-size: 1.5em;
+            margin-bottom: 16px;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 18px;
+        }
+        .product {
+            background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+            padding: 16px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+            width: 150px;
+            transition: transform 0.2s;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .product img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .product h3 {
+            color: #904e95;
+            margin: 8px 0 4px 0;
+            font-size: 1em;
+        }
+        .product p {
+            color: #e96443;
+            font-size: 1em;
+            margin-bottom: 8px;
+        }
+        button {
+            background: linear-gradient(90deg, #e96443 0%, #904e95 100%);
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: linear-gradient(90deg, #ffd700 0%, #e96443 100%);
+            color: #904e95;
+        }
+        footer {
+            background: linear-gradient(90deg, #904e95 0%, #e96443 100%);
+            color: #fff;
+            text-align: center;
+            padding: 12px 0;
+            margin-top: 24px;
+            font-size: 1em;
+            letter-spacing: 1px;
+            box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+        }
+        @media (max-width: 600px) {
+            .products {
+                flex-direction: column;
+                align-items: center;
+            }
+            .product {
+                width: 90vw;
+                max-width: 300px;
+            }
+        }
+    </style>
+    <script>
+        let cartCount = 0;
+        function addToCart(productName, price) {
+            cartCount++;
+            document.getElementById('cart-count').textContent = cartCount;
+            alert(productName + " added to cart! Price: $" + price);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>My Dress Shop</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">Contact</a>
+            <a href="#">Cart (<span id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+    <main>
+        <section class="featured">
+            <h2>Featured Dresses</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="dress1.jpg" alt="Red Summer Dress">
+                    <h3>Red Summer Dress</h3>
+                    <p>$49.99</p>
+                    <button onclick="addToCart('Red Summer Dress', 49.99)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="dress2.jpg" alt="Blue Evening Gown">
+                    <h3>Blue Evening Gown</h3>
+                    <p>$89.99</p>
+                    <button onclick="addToCart('Blue Evening Gown', 89.99)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="dress3.jpg" alt="Floral Midi Dress">
+                    <h3>Floral Midi Dress</h3>
+                    <p>$59.99</p>
+                    <button onclick="addToCart('Floral Midi Dress', 59.99)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 My Dress Shop. All rights reserved.</p>
+    </footer>
+</body>
+</html>

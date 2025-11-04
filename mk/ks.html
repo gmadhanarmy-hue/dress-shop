@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Textile Shop</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #b30059;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    nav {
+      background-color: #eee;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #b30059;
+    }
+    .hero {
+      background: url('https://i.imgur.com/Wp7QfMC.jpg') no-repeat center center/cover;
+      height: 300px;
+      color: white;
+      text-align: center;
+      padding-top: 100px;
+      font-size: 2em;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      justify-content: center;
+    }
+    .product {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin: 10px;
+      padding: 10px;
+      width: 200px;
+      text-align: center;
+    }
+    .product img {
+      width: 100%;
+      height: auto;
+    }
+    footer {
+      background-color: #b30059;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Textile Shop</h1>
+    <p>Traditional | Trendy | Trusted</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">Contact</a>
+    <a href="#">Cart</a>
+  </nav>
+
+  <div class="hero">
+    <p>New Saree Collections Out Now!</p>
+  </div>
+
+  <section class="products">
+    <div class="product">
+      <img src="https://i.imgur.com/xlScl1V.jpg" alt="Saree" />
+      <h3>Silk Saree</h3>
+      <p>₹1,999</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="https://i.imgur.com/AV1lM2Y.jpg" alt="Churidhar" />
+      <h3>Churidhar Set</h3>
+      <p>₹1,499</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="https://i.imgur.com/Nlz78OC.jpg" alt="Shirt" />
+      <h3>Men's Shirt</h3>
+      <p>₹899</p>
+      <button>Add to Cart</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 My Textile Shop | Made with ❤️ in Tamil Nadu</p>
+  </footer>
+
+</body>
+</html>
